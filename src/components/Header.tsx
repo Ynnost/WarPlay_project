@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Links, LinksType } from "./Links";
+import { Links, LinksType } from "./universalСomponents/Links";
 import "../App.css";
 import logo from "../image/Logo.svg";
 
@@ -21,7 +21,7 @@ export const Header: React.FC<HeaderType> = () => {
 
   useEffect(() => {
     const onScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 20) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -38,7 +38,7 @@ export const Header: React.FC<HeaderType> = () => {
   };
 
   return (
-    <div className={`topbar ${scrolled ? "scrolled":''}`}>
+    <div className={`topbar ${scrolled ? "scrolled" : ""}`}>
       <div className="logo">
         <img src={logo} alt="" />
         <p>WARPLAY.CLOUD</p>

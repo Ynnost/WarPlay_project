@@ -1,5 +1,5 @@
 import React from "react";
-import "../App.css";
+import "../../App.css";
 
 export type LinksType = {
   title: string;
@@ -9,6 +9,7 @@ export type LinksType = {
 };
 
 export const Links: React.FC<LinksType> = ({ active, href, callback, title }) => {
+  
   const onUpdateActiveLink = () => {
     return callback?.(href);
   };

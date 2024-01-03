@@ -1,4 +1,5 @@
-import React, { useRef, useState } from "react";
+/* eslint-disable jsx-a11y/img-redundant-alt */
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "../App.css";
 import "swiper/css";
@@ -12,7 +13,7 @@ export type SlaiderImageType = {};
 
 const imageSlaider = [Stalker, War, Fly, Cosmo];
 
-export const Slaider: React.FC<SlaiderImageType> = ({}) => {
+export const Slaider: React.FC<SlaiderImageType> = () => {
   return (
     <Swiper>
       {imageSlaider.map((image, index) => (

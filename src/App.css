@@ -13,6 +13,68 @@
   src: url("./fonts/AireExterior.ttf") format("opentype");
 }
 
+h2 {
+  color: #fff;
+  font-family: Aire Exterior;
+  font-size: 39px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+h3 {
+  color: #00c5ff;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+h6 {
+  color: #57d6ff;
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 180%;
+}
+
+h5 {
+  color: #ababab;
+  font-family: Roboto;
+  font-size: 21.33px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%;
+}
+
+hr {
+  width: 50px;
+  height: 0px;
+  margin-right: 40px;
+  flex-shrink: 0;
+  stroke-width: 1px;
+  stroke: #57d6ff;
+  border: 1px solid rgb(49, 196, 232);
+}
+
+.line_text {
+  display: flex;
+  align-items: center;
+  margin-bottom: -60px;
+}
+
+.header_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
 /* Header */
 
 .topbar {
@@ -160,4 +222,168 @@
 .mein .slider .image {
   max-width: 100%; /* Установите максимальную ширину изображения 100% */
   height: auto; /* Автоматически определить высоту изображения */
+}
+
+/* CloudGaming */
+
+.cloudGaming {
+  display: flex;
+  width: 100%;
+  height: 900px;
+  background: #141c24;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.cloudGaming hr {
+  width: 50px;
+  height: 0px;
+  margin-right: 40px;
+  flex-shrink: 0;
+  stroke-width: 1px;
+  stroke: #57d6ff;
+  border: 1px solid rgb(49, 196, 232);
+}
+
+.cloudGaming h3 {
+  text-decoration: underline;
+  text-decoration-color: #00c5ff;
+  text-underline-offset: 10px;
+}
+
+.cloudGaming_text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 480px;
+  max-height: 517px;
+  flex-shrink: 0;
+}
+
+/* StartPlaying */
+
+.startPlaying {
+  display: flex;
+  width: 100%;
+  height: 700px;
+  background: #141c24;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.startPlaying .image {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.startPlaying hr {
+  width: 73px;
+  height: 0px;
+  background: #50afcd;
+}
+
+.startPlaying span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.startPlaying img {
+  margin-bottom: auto;
+}
+
+.startPlaying h3 {
+  text-decoration: underline;
+  text-decoration-color: #00c5ff;
+  text-underline-offset: 10px;
+}
+
+/* rate */
+.rates {
+  display: flex;
+  width: 100%;
+  height: 900px;
+  background: #141c24;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.hr hr {
+  width: 582px;
+  height: 0px;
+  margin-top: 30px;
+}
+
+.rates_box {
+  display: flex;
+}
+
+.rate {
+  display: flex;
+  width: 400px;
+  height: 543px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: #1f2631;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  white-space: pre-wrap;
+  align-content: stretch;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 0 10px;
+}
+
+.rate .text {
+  display: flex;
+  margin: 0 10px;
+  flex-direction: column;
+  width: 311px;
+  margin: 0 15px;
+}
+.rate h2 {
+  width: 311px;
+  height: 90px;
+  flex-shrink: 0;
+  color: #fff;
+  font-family: Roboto;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.rate h4 {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.rate button {
+  width: 321px;
+  height: 70px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: #00c5ff;
+  color: #141c24;
+  font-family: Aire Exterior;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%; /* 43.2px */
+}
+
+.rate_act {
+  background: #00c5ff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.rate_act h2 h4 h5 button {
+  color: #141c24;
 }
