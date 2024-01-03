@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import "../../App.css";
 
 export type RateType = {
+  id:number
   price: string;
   active: boolean;
-  callback: () => void;
+  callback:(id:number)=>void
 };
 
-export const Rate: React.FC<RateType> = ({ price, callback, active }) => {
- 
-
+export const Rate: React.FC<RateType> = ({ id, price, active, callback }) => {
   const changeTitle = (price: string) => {
     if (price === "45") {
       return "Почасовая  оплата";
@@ -41,7 +40,7 @@ export const Rate: React.FC<RateType> = ({ price, callback, active }) => {
         <h4>{price + "р. - " + (price === "45" ? "час" : "месяц")}</h4>
         <h5>{changeText(price)}</h5>
       </div>
-      <button onClick={callback}>Выбрать</button>
+      <button onClick={()=>callback(id)}>Выбрать</button>
     </div>
   );
 };

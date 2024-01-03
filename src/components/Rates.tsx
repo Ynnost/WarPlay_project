@@ -4,15 +4,14 @@ import { Rate } from "./universalСomponents/Rate";
 type RatesType = {};
 
 export const Rates: React.FC<RatesType> = () => {
+  const [rate, setRate] = useState([
+    { id: 1, prise: "45", active: false },
+    { id: 2, prise: "2999", active: false },
+    { id: 3, prise: "1500", active: false },
+  ]);
 
-  const [activeStates, setActiveStates] = useState([false, false, false]);
-
-  const onChangeClick = (index: number) => {
-    setActiveStates((prevStates) => {
-      const newStates = [...prevStates];
-      newStates[index] = !newStates[index];
-      return newStates;
-    });
+  const onChangeClick = (id: number) => {
+    setRate(rate.map((el) => (el.id === id ? { ...el, active: true } : { ...el, active: false })));
   };
 
   return (
@@ -25,9 +24,9 @@ export const Rates: React.FC<RatesType> = () => {
         <h2>Доступные подписки</h2>
       </div>
       <div className="rates_box">
-        <Rate price={"45"} active={activeStates[0]} callback={() => onChangeClick(0)} />
-        <Rate price={"2999"} active={activeStates[1]} callback={() => onChangeClick(1)} />
-        <Rate price={"1500"} active={activeStates[2]} callback={() => onChangeClick(2)} />
+        {rate.map((r) => (
+          <Rate id={r.id} key={r.id} price={r.prise} active={r.active} callback={onChangeClick} />
+        ))}
       </div>
       <div className="hr">
         <hr />
