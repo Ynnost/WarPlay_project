@@ -31,3 +31,5 @@ export const CloudGaming: React.FC<CloudGamingType> = () => {
     </div>
   );
 };
+
+export default CloudGaming;

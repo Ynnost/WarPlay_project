@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import "../../App.css";
 
 export type RateType = {
-  id:number
+  id: number;
   price: string;
   active: boolean;
-  callback:(id:number)=>void
+  callback: (id: number) => void;
 };
 
 export const Rate: React.FC<RateType> = ({ id, price, active, callback }) => {
@@ -40,7 +40,7 @@ export const Rate: React.FC<RateType> = ({ id, price, active, callback }) => {
         <h4>{price + "р. - " + (price === "45" ? "час" : "месяц")}</h4>
         <h5>{changeText(price)}</h5>
       </div>
-      <button onClick={()=>callback(id)}>Выбрать</button>
+      <button onClick={() => callback(id)}>Выбрать</button>
     </div>
   );
 };

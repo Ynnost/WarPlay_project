@@ -1,19 +1,18 @@
 import React from "react";
 import "./App.css";
 import { Header } from "./components/Header";
-import { MeinScreen } from "./components/MeinScreen";
-import { CloudGaming } from "./components/CloudGaming";
-import { StartPlaying } from "./components/StartPlaying";
-import { Rates } from "./components/Rates";
+import { Route, Routes } from "react-router-dom";
+import HomePage from "./components/HomePage";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <MeinScreen />
-      <CloudGaming />
-      <StartPlaying />
-      <Rates/>
+      <Routes>
+        <Route path="/" element={<Header />}>
+          <Route index element={<HomePage />} />
+          <Route path="*" element={<HomePage />} />
+        </Route>
+      </Routes>
     </div>
   );
 }

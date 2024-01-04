@@ -1,24 +1,19 @@
 import React from "react";
 import "../../App.css";
+import { NavLink } from "react-router-dom";
 
 export type LinksType = {
   title: string;
-  href: string;
-  active?: boolean;
-  callback?: (href: string) => void;
+  to: string;
+  onClick?: () => void;
 };
 
-export const Links: React.FC<LinksType> = ({ active, href, callback, title }) => {
-  
-  const onUpdateActiveLink = () => {
-    return callback?.(href);
-  };
-
+export const Links: React.FC<LinksType> = ({ to, title, onClick }) => {
   return (
     <li>
-      <a href={`#${href}`} className={active ? "active" : ""} onClick={onUpdateActiveLink}>
+      <NavLink to={to} className={({ isActive }) => (isActive ? "active" : "")} onClick={onClick}>
         {title}
-      </a>
+      </NavLink>
     </li>
   );
 };
