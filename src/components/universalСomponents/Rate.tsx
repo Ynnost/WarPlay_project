@@ -34,13 +34,15 @@ export const Rate: React.FC<RateType> = ({ id, price, active, callback }) => {
   };
 
   return (
-    <div className={active ? "rate_act" : "rate"}>
+    <div className={`${"rate"} ${active ? "rate_act" : ""}`}>
       <div className="text">
         <h2>{changeTitle(price)}</h2>
         <h4>{price + "р. - " + (price === "45" ? "час" : "месяц")}</h4>
         <h5>{changeText(price)}</h5>
       </div>
+      <span>
       <button onClick={() => callback(id)}>Выбрать</button>
+      </span>
     </div>
   );
 };

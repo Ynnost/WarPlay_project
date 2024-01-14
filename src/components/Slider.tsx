@@ -3,6 +3,7 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "../App.css";
 import "swiper/css";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import Cosmo from "../image/Cosmo.svg";
 import Fly from "../image/Fly.svg";
 import Stalker from "../image/Stalker.svg";
@@ -15,7 +16,20 @@ const imageSlaider = [Stalker, War, Fly, Cosmo];
 
 export const Slaider: React.FC<SlaiderImageType> = () => {
   return (
-    <Swiper>
+    <Swiper
+      spaceBetween={30}
+      centeredSlides={true}
+      autoplay={{
+        delay: 3000,
+        disableOnInteraction: false,
+      }}
+      pagination={{
+        clickable: true,
+      }}
+      navigation={true}
+      modules={[Autoplay, Pagination, Navigation]}
+      className="mySwiper"
+    >
       {imageSlaider.map((image, index) => (
         <SwiperSlide key={index}>
           <img src={image} alt="Image" className="image" />

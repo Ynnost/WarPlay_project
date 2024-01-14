@@ -5,6 +5,8 @@ import { MeinScreen } from "./MeinScreen";
 import { StartPlaying } from "./StartPlaying";
 import { Rates } from "./Rates";
 import CloudGaming from "./CloudGaming";
+import { GameBrouser } from "./GameBrowser";
+
 
 function HomePage() {
   return (
@@ -20,6 +22,9 @@ function HomePage() {
       </div>
       <div id="section-3">
         <Rates />
+      </div>
+      <div id="section-4">
+        <GameBrouser />
       </div>
     </div>
   );
