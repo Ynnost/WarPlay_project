@@ -22,7 +22,7 @@ export const GameBrouser: React.FC<GameBrouserType> = () => {
           <h3>Открыть в браузере</h3>
         </a>
       </div>
-      <div style={{ width: "100%", height: "100%", position: "relative" }}>
+      <div style={{ position: "relative" }}>
         <img
           style={{
             width: 603.09,

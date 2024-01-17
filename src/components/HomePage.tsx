@@ -6,7 +6,8 @@ import { StartPlaying } from "./StartPlaying";
 import { Rates } from "./Rates";
 import CloudGaming from "./CloudGaming";
 import { GameBrouser } from "./GameBrowser";
-
+import { LocationMap } from "./LocationMap";
+import { Footer } from "./Footer";
 
 function HomePage() {
   return (
@@ -26,6 +27,10 @@ function HomePage() {
       <div id="section-4">
         <GameBrouser />
       </div>
+      <div id="section-5">
+        <LocationMap />
+      </div>
+      <Footer />
     </div>
   );
 }

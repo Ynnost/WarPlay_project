@@ -407,11 +407,12 @@ a {
 .gameBrowser {
   display: flex;
   width: 100%;
-  height: 700px;
+  height: 900px;
   background: #141c24;
+  justify-content: flex-start;
+  /* align-items: center; */
+  flex-wrap: nowrap;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
 }
 
 .gameBrowser_text {
@@ -421,7 +422,7 @@ a {
   max-width: 480px;
   max-height: 517px;
   flex-shrink: 0;
-  margin-left: 20%;
+  margin-left: 17px;
 }
 
 .gameBrowser h3 {
@@ -431,8 +432,6 @@ a {
 }
 
 .gameImage {
-  width: "100%";
-  height: "100%";
   position: "relative";
 }
 
@@ -442,3 +441,79 @@ a {
   transform: "rotate(-30deg)";
   border-radius: 10;
 } */
+
+/* MapLocal */
+
+.mapLocal {
+  display: flex;
+  width: 100%;
+  height: 900px;
+  background: #141c24;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.footerBlock {
+  display: flex;
+  width: 100%;
+  height: 9.375rem;
+  position: "relative";
+}
+
+.logoFooter {
+  display: flex;
+  text-align: center;
+  flex-shrink: 0;
+  background: #171717;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logoFooter img {
+  width: 2.98888rem;
+  height: 2.33231rem;
+  flex-shrink: 0;
+}
+
+.logoFooter h2 {
+  color: #ececec;
+  font-family: Pulsar - Original;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.logoFooter h3 {
+  color: #ececec;
+  font-family: Pulsar - Original;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.logoFooter h4 {
+  color: #838383;
+  font-family: Pulsar - Original;
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.contactFooter {
+  display: flex;
+  text-align: center;
+  flex-shrink: 0;
+  background: #171717;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  justify-content: space-around;
+  align-items: center;
+}
